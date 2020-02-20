@@ -1,0 +1,449 @@
+@import "owl.carousel"
+$blueDark:  #000045
+$gray:      #e2e2e2
+$phone: 'screen and (max-width: 767px)'
+
+.calc
+    &__btn
+        border: 1px solid $gray
+        padding: 10px 18px
+        font-size: 14px
+        margin-top: 5px
+        display: inline-flex
+        align-self: flex-end
+        text-align: right
+        background: $gray
+        color: $blueDark
+        cursor: pointer
+        &:hover
+            background: lighten($gray, 5%)
+    &__row
+        display: flex
+        flex-direction: row
+        &_center
+            @extend .calc__row
+            align-items: center
+            justify-content: center
+        @media #{$phone}
+            flex-wrap: wrap
+    &__header
+        text-align: center
+        font-size: 32px
+        line-height: 120%
+        color: $blueDark
+        text-align: center
+        font-family: Verdana
+        margin-bottom: 17px
+        padding: 5px 10px 8px 0px
+        font-weight: lighter
+        text-transform: uppercase
+
+
+    &__colitem
+        display: flex
+        flex-direction: column
+        flex-basis: calc(25% - 5px)
+        padding: 5px
+        margin: 0 10px
+        @media #{$phone}
+            flex-basis: 100%
+
+        &-image
+            // height: 180px
+            width: 100%
+            overflow: hidden
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            img
+                // min-width: 100%
+                // width: auto
+                // height: auto
+                max-width: 100%
+                // max-height: none
+        &-name
+            font-size: 18px
+            color: $blueDark
+            text-align: center
+            padding: 10px 0
+        &-item
+            border: 2px solid transparent
+            cursor: pointer
+            &_active
+                background: lighten($gray, 7%)
+                border-color: $blueDark
+
+    &__checkbox
+        display: flex
+        flex-direction: row
+        flex-basis: 33%
+        input[type=checkbox], input[type=radio]
+            display: none
+        label
+            font-size: 18px
+            color: $blueDark
+            display: inline-flex
+            align-items: center
+            line-height: 1.5
+            cursor: pointer
+            &:before
+                display: flex
+                height: 20px
+                width: 20px
+                border: 2px solid $blueDark
+                content: ""
+                margin-right: 10px
+        & input[type=checkbox]:checked + label:before, & input[type=radio]:checked + label:before
+            background: $blueDark
+
+    &_block
+        padding: 20px 0
+
+        & .calc__header
+            @extend .calc__header
+            background: $gray
+            font-size: 22px
+
+    &__models
+        @extend .calc_block
+        .calc__row
+            position: relative
+        &-item
+            @extend .calc__colitem-item
+            .calc__colitem-image
+                height: 180px
+        .owl-carousel
+            overflow: hidden
+        .owl-carousel .owl-nav button
+            &.owl-prev, &.owl-next
+                font-size: 100px
+                line-height: 1
+                color: $blueDark
+                opacity: 0.7
+                position: absolute
+                top: 0
+                display: flex
+                align-items: center
+                width: 100px
+                height: 100%
+                transition: 0.3s
+                z-index: 1000
+                outline: none
+                &:hover
+                    opacity: 0.9
+            &.owl-prev
+                left: 0
+                justify-content: flex-start
+            &.owl-next
+                right: 0
+                justify-content: flex-end
+
+    &__form
+        @extend .calc_block
+        &-item
+            @extend .calc__colitem-item
+
+    &__material
+        @extend .calc_block
+        &-item
+            @extend .calc__colitem-item
+
+    &__height
+        @extend .calc_block
+        &-item
+            @extend .calc__colitem-item
+
+    &__map
+        @extend .calc_block
+        &-item
+            @extend .calc__colitem
+            flex-basis: calc(40% - 5px)
+            @media #{$phone}
+                flex-basis: 100%
+        .calc__colitem-image
+            position: relative
+            .calc__map-item__pos
+                $height: 85px
+                $width: 85px
+                position: absolute
+                width: $width
+                height: $height
+                cursor: pointer
+                // border: 1px solid red
+                // background: rgba(red, 0.2)
+                @for $num from 11 through 49
+                    &-m#{$num}, &-d#{$num}
+                        @extend .calc__map-item__pos
+                @for $num from 1 through 4
+                    &-m1#{$num}, &-d1#{$num}
+                        left: 68px + $width * ($num - 1)
+                        top: 2px
+                @for $num from 1 through 2
+                    &-m2#{$num}
+                        left: 2px
+                        top: 142px - $height * ($num - 1)
+                @for $num from 3 through 6
+                    $width: 90px
+                    &-m2#{$num}
+                        left: 60px + $width * ($num - 3)
+                        top: 2px
+                @for $num from 7 through 8
+                    &-m2#{$num}
+                        right: 2px
+                        top: (142px - $height) + ($height * ($num - 7))
+                &-d21
+                    left: 2px
+                    top: 125px
+                &-d22
+                    left: 195px
+                    top: 2px
+                &-d23
+                    right: 2px
+                    top: 125px
+                @for $num from 1 through 2
+                    $height: 107px
+                    &-m3#{$num}
+                        left: 2px
+                        top: 164px - $height * ($num - 1)
+                @for $num from 3 through 5
+                    $width: 107px
+                    &-m3#{$num}
+                        left: 60px + $width * ($num - 3)
+                        top: 2px
+                &-d31
+                    left: 2px
+                    top: 125px
+                &-d32
+                    left: 126px
+                    top: 2px
+                &-d33
+                    left: 262px
+                    top: 2px
+                @for $num from 1 through 3
+                    $width: 107px
+                    &-m4#{$num}
+                        left: 118px + $width * ($num - 1)
+                        top: 2px
+                @for $num from 4 through 5
+                    $height: 107px
+                    &-m4#{$num}
+                        right: 2px
+                        top: (164px - $height) + $height * ($num - 4)
+                &-d41
+                    left: 126px
+                    top: 2px
+                &-d42
+                    left: 262px
+                    top: 2px
+                &-d43
+                    right: 2px
+                    top: 125px
+
+    &__sizes
+        @extend .calc_block
+        .calc__row
+            padding-top: 80px
+        &-item
+            @extend .calc__colitem
+        &-image
+            @extend .calc__colitem-image
+            position: relative
+            overflow: visible
+            z-index: 100
+        &-size
+            position: absolute
+            display: flex
+            align-items: center
+            justify-content: center
+            align-items: center
+            &__input
+                width: 100px
+                height: 30px
+                line-height: 1
+                font-size: 18px
+                padding: 3px 10px
+                margin: 40px 50px
+                outline: none
+                text-align: center
+                position: relative
+                z-index: 100
+                &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
+                    display: none
+        input, input[type=number], input[type=text]
+            @extend .calc__sizes-size__input
+
+        &-size1
+            @extend .calc__sizes-size
+            width: 100%
+            bottom: 100%
+            &:after
+                display: block
+                position: absolute
+                width: 1px
+                background: #666666
+                content: ""
+                top: 50%
+                bottom: 0
+                z-index: 90
+
+        &-size2
+            @extend .calc__sizes-size
+            height: 100%
+            right: 100%
+        &-size3
+            @extend .calc__sizes-size
+            height: 100%
+            left: 100%
+
+    &__table
+        @extend .calc_block
+        &-item
+            @extend .calc__colitem-item
+            align-items: center
+            justify-content: center
+            span.size
+                font-size: 0.8em
+                color: #333333
+
+    &__technic
+        @extend .calc_block
+        &-row
+            @extend .calc__row
+            flex-wrap: wrap
+        &-checkbox
+            @extend .calc__checkbox
+            flex-basis: 50%
+
+    &__order
+        @extend .calc_block
+        &-row
+            display: flex
+            flex-direction: row
+            align-items: center
+            margin-bottom: 5px
+            justify-content: center
+            @media #{$phone}
+                flex-direction: column
+                align-items: flex-start
+        &-form
+            @extend .calc__colitem-item
+            flex-basis: 50%
+            @media #{$phone}
+                flex-basis: 100%
+        &-alert
+            @extend .calc__colitem-item
+            flex-basis: 50%
+            font-size: 30px
+            margin-left: 10px
+            padding: 15px
+            font-weight: lighter
+            background: $gray
+            color: $blueDark
+            display: flex
+            align-items: center
+            justify-content: center
+            cursor: default
+            @media #{$phone}
+                flex-basis: 100%
+
+
+        label, .label
+            font-size: 18px
+            color: $blueDark
+            font-weight: normal
+            flex-basis: 40%
+            margin-bottom: 10px
+            &[for="calc__order-input_file"]
+                color: #ababab
+                background: none
+                cursor: pointer
+                font-size: 14px
+                font-weight: 500
+                overflow: hidden
+                height: auto
+                letter-spacing: 0.02em
+                line-height: 18px
+                padding: 20px 15px
+                position: relative
+                & > img.icon
+                    position: absolute
+                    top: 15px
+                    right: 29px
+                    height: 30px
+        &-radio
+            @extend .calc__checkbox
+            flex-basis: unset
+        &-group
+            flex-basis: 60%
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            flex-wrap: wrap
+            @media #{$phone}
+                width: 100%
+        &-input
+            width: 100%
+            resize: none
+            &.has-error
+                border-color: red
+        &-input_file:checked ~ label
+            background-color: #000
+        &-input_file
+            width: 0.1px
+            height: 0.1px
+            opacity: 0
+            overflow: hidden
+            position: absolute
+            z-index: -1
+        &-dropdown
+            background: #f8f8f8
+            width: 100%
+            &.hover
+                background: #eaeaea
+            &.drop
+                /*background: #eefef3*/
+            & progress
+                display: none
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 100%
+                -webkit-appearance: none
+                appearance: none
+
+                &[value]::-webkit-progress-bar
+                    background-color: #eee
+                    border-radius: 2px
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset
+
+                &[value]::-webkit-progress-value
+                    background-color: $blueDark
+                    border-radius: 2px
+                    background-size: 35px 20px, 100% 100%, 100% 100%
+
+        & .success-row
+            width: 70%
+            min-height: 35px
+
+        & .error-msg
+            width: 100%
+            height: 100%
+            position: absolute
+            background: #ffffffb3
+            top: 0
+            left: 0
+            display: flex
+            align-items: center
+            justify-content: center
+            color: #e33530
+            font-weight: bold
+
+        & .success-row
+            img
+                max-height: 35px
+                max-width: 60px
+                border-radius: 5px
+                margin-right: 5px
+                box-shadow: 0 0 8px rgba(175, 175, 175, 0.5)

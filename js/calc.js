@@ -10,9 +10,6 @@
             }
         });
 
-        $("body").on("click", ".js-calc__models-item", function (e) {
-            $("#calc-send input[name='calc-model']").val($(this).find(".calc__colitem-name span").text());
-        });
 
         $("body").on("click", ".js-calc__material-item", function (e) {
             $("#calc-send input[name='calc-material']").val($(this).find(".calc__colitem-name").text());
@@ -85,14 +82,14 @@
             $("#calc-send input[name=calc-size]").val(sizes);
         });
 
-        $(".js-calc__order-radio").change(function (e) {
-            e.preventDefault();
-            if (jQuery("input[name=calc__order-receiver]:checked").val() != "Email") {
-                $(".calc__order-row__email").slideUp().find("input").removeAttr("required");
-            } else{
-                $(".calc__order-row__email").slideDown().find("input").attr("required", "required");
-            }
-        });
+        // $(".js-calc__order-radio").change(function (e) {
+            // e.preventDefault();
+            // if (jQuery("input[name=calc__order-receiver]:checked").val() != "Email") {
+            //     $(".calc__order-row__email").slideUp().find("input").removeAttr("required");
+            // } else{
+            //     $(".calc__order-row__email").slideDown().find("input").attr("required", "required");
+            // }
+        // });
 
         $(".js-calc__map-item__pos").click(function (e) {
             var pos = $(this).attr("data-calcmap");
@@ -156,26 +153,26 @@
 			};
 		}
 
-        $('.owl-carousel').owlCarousel({
-            items: 4,
-            loop: true,
-            nav: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                900: {
-                    items: 4
-                }
-            }
-        });
+        // $('.owl-carousel').owlCarousel({
+        //     items: 4,
+        //     loop: true,
+        //     nav: true,
+        //     responsive: {
+        //         0: {
+        //             items: 1
+        //         },
+        //         600: {
+        //             items: 2
+        //         },
+        //         900: {
+        //             items: 4
+        //         }
+        //     }
+        // });
     });
 
     function buildForm() {
-        $("#calc-send input[name=calc-model]").val($(".js-calc__models-item.calc__colitem-item_active .calc__colitem-name span").text());
+        // $("#calc-send input[name=calc-model]").val($(".js-calc__models-item.calc__colitem-item_active .calc__colitem-name span").text());
         $("#calc-send input[name=calc-form]").val($(".js-calc__form-item.calc__colitem-item_active .calc__colitem-name span").text());
         $("#calc-send input[name=calc-material]").val($(".js-calc__material-item.calc__colitem-item_active .calc__colitem-name span").text());
         $("#calc-send input[name=calc-map-m]").val($(".js-calc__map-item-m img:visible").attr("src"));
@@ -183,6 +180,8 @@
         $(".js-calc__sizes-size .calc__sizes-size__input").change();
         $("#calc-send input[name=calc-height]").val($(".js-calc__height-item.calc__colitem-item_active .calc__colitem-name span").text());
         $("#calc-send input[name=calc-table]").val($(".js-calc__table-item.calc__colitem-item_active .calc__colitem-name span").text());
+        $("#calc-send input[name=calc-furniture]").val($(".js-calc__furniture-item.calc__colitem-item_active .calc__colitem-name span").text());
+        $("#calc-send input[name=calc-date]").val($(".js-calc__date-item.calc__colitem-item_active .calc__colitem-name span").text());
         var technics = "";
         $.each($(".js-calc__technic-checkbox input:checked"), function (i, e) {
             technics += $(e).siblings("label").text() + ", ";

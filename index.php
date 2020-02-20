@@ -22,91 +22,13 @@
             <a href="" style="color:#FFF"><img style="width:110%;margin-top:15px;" src="/images/logo.png"></a>
         </div>
         <div class="header-phones">
-            <div class="tel" style="text-align:left">
-                <a href="tel:+78332221204">8(8332) 22-12-04</a> магазин ул. Блюхера 20<br>
-            </div>
+            <!-- <div class="tel" style="text-align:left">
+            </div> -->
         </div>
     </div>
     <div class="container">
         <div class="calc__head">
             <h1 class="calc__header">РАСЧЕТ КУХНИ ОНЛАЙН</h1>
-        </div>
-        <div class="calc__models">
-            <h2 class="calc__header">Модель кухни</h2>
-            <div class="calc__row owl-carousel owl-theme">
-                <div class="calc__colitem js-calc__models-item calc__models-item calc__colitem-item_active">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/1.jpg" alt="Кухни СТАНДАРТ-Мыло"></div>
-                    <div class="calc__colitem-name"><span>Кухни СТАНДАРТ-Мыло</span></div>
-                </div>
-                <div class="calc__colitem js-calc__models-item calc__models-item ">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/2.jpg" alt=""></div>
-                    <div class="calc__colitem-name"><span>Кухни СТАНДАРТ-Классика</span></div>
-                </div>
-                <div class="calc__colitem js-calc__models-item calc__models-item ">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/3.jpg" alt=""></div>
-                    <div class="calc__colitem-name"><span>Кухни СТАНДАРТ-Классика 2</span></div>
-                </div>
-                <div class="calc__colitem js-calc__models-item calc__models-item ">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/4.jpg" alt=""></div>
-                    <div class="calc__colitem-name"><span>Кухни СТАНДАРТ-Модерн</span></div>
-                </div>
-                <div class="calc__colitem js-calc__models-item calc__models-item ">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/5.jpg" alt=""></div>
-                    <div class="calc__colitem-name"><span>Кухни СТАНДАРТ-Прованс</span></div>
-                </div>
-                <div class="calc__colitem js-calc__models-item calc__models-item ">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/6.jpg" alt=""></div>
-                    <div class="calc__colitem-name"><span>Кухни СТАНДАРТ-Мишель</span></div>
-                </div>
-                <div class="calc__colitem js-calc__models-item calc__models-item ">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/7.jpg" alt=""></div>
-                    <div class="calc__colitem-name"><span>Кухни СТАНДАРТ-Джудит</span></div>
-                </div>
-                <div class="calc__colitem js-calc__models-item calc__models-item ">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/8.jpg" alt=""></div>
-                    <div class="calc__colitem-name"><span>Кухни СТАНДАРТ-Интегро</span></div>
-                </div>
-                <div class="calc__colitem js-calc__models-item calc__models-item ">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/9.jpg" alt=""></div>
-                    <div class="calc__colitem-name"><span>Кухни Стандарт-3Д</span></div>
-                </div>
-                <div class="calc__colitem js-calc__models-item calc__models-item ">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/10.jpg" alt=""></div>
-                    <div class="calc__colitem-name"><span>Кухни СТАНДАРТ-МИКС</span></div>
-                </div>
-                <div class="calc__colitem js-calc__models-item calc__models-item ">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/11.jpg" alt=""></div>
-                    <div class="calc__colitem-name"><span>Кухни МАРИЯ</span></div>
-                </div>
-                <div class="calc__colitem js-calc__models-item calc__models-item ">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/12.jpg" alt=""></div>
-                    <div class="calc__colitem-name"><span>Кухни ВИОЛА</span></div>
-                </div>
-                <div class="calc__colitem js-calc__models-item calc__models-item ">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/13.jpg" alt=""></div>
-                    <div class="calc__colitem-name"><span>Кухни АНЖЕЛИКА</span></div>
-                </div>
-                <div class="calc__colitem js-calc__models-item calc__models-item ">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/14.jpg" alt=""></div>
-                    <div class="calc__colitem-name"><span>Кухни ВИКТОРИЯ</span></div>
-                </div>
-                <div class="calc__colitem js-calc__models-item calc__models-item ">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/15.jpg" alt=""></div>
-                    <div class="calc__colitem-name"><span>Кухни Фелиция</span></div>
-                </div>
-                <div class="calc__colitem js-calc__models-item calc__models-item ">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/16.jpg" alt=""></div>
-                    <div class="calc__colitem-name"><span>Кухни СОФИЯ</span></div>
-                </div>
-                <div class="calc__colitem js-calc__models-item calc__models-item ">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/17.jpg" alt=""></div>
-                    <div class="calc__colitem-name"><span>Кухни СИЛИЯ</span></div>
-                </div>
-                <div class="calc__colitem js-calc__models-item calc__models-item ">
-                    <div class="calc__colitem-image"><img src="/photos/kuhni/18.jpg" alt=""></div>
-                    <div class="calc__colitem-name"><span>Кухни ОЛИМПИЯ</span></div>
-                </div>
-            </div>
         </div>
         <div class="calc__form">
             <h2 class="calc__header">Форма кухни</h2>
@@ -133,16 +55,10 @@
             <h2 class="calc__header">Материал фасадов</h2>
             <div class="calc__row">
                 <div class="calc__colitem js-calc__material-item calc__material-item calc__colitem-item_active">
-                    <div class="calc__colitem-name"><span>МДФ</span></div>
+                    <div class="calc__colitem-name"><span>МДФ + ПВХ</span></div>
                 </div>
                 <div class="calc__colitem js-calc__material-item calc__material-item">
-                    <div class="calc__colitem-name"><span>Пластик</span></div>
-                </div>
-                <div class="calc__colitem js-calc__material-item calc__material-item">
-                    <div class="calc__colitem-name"><span>Эмаль</span></div>
-                </div>
-                <div class="calc__colitem js-calc__material-item calc__material-item">
-                    <div class="calc__colitem-name"><span>ЛДСП</span></div>
+                    <div class="calc__colitem-name"><span>МДФ + эмаль</span></div>
                 </div>
             </div>
         </div>
@@ -274,14 +190,8 @@
         <div class="calc__table">
             <h2 class="calc__header">Материал столешницы</h2>
             <div class="calc__row">
-                <div class="calc__colitem js-calc__table-item calc__table-item calc__colitem-item_active">
-                    <div class="calc__colitem-name"><span>постформинг <span class="size">28&nbsp;мм</span></span></div>
-                </div>
                 <div class="calc__colitem js-calc__table-item calc__table-item">
                     <div class="calc__colitem-name"><span>постформинг влагостойкий <span class="size">38&nbsp;мм</span></span></div>
-                </div>
-                <div class="calc__colitem js-calc__table-item calc__table-item">
-                    <div class="calc__colitem-name"><span>пластик <span class="size">32&nbsp;мм</span></span></div>
                 </div>
                 <div class="calc__colitem js-calc__table-item calc__table-item">
                     <div class="calc__colitem-name"><span>искусственный камень <span class="size">12&nbsp;мм</span><br>листовой <span class="size">44&nbsp;мм</span></span></div>
@@ -291,6 +201,35 @@
                 </div>
             </div>
         </div>
+
+        <div class="calc__furniture">
+            <h2 class="calc__header">Фурнитура</h2>
+            <div class="calc__row">
+                <div class="calc__colitem js-calc__furniture-item calc__furniture-item calc__colitem-item_active">
+                    <div class="calc__colitem-name"><span>Стандарт</span></div>
+                </div>
+                <div class="calc__colitem js-calc__furniture-item calc__furniture-item">
+                    <div class="calc__colitem-name"><span>Премиум</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="calc__date">
+            <h2 class="calc__header">Когда планируете приобрести?</h2>
+            <div class="calc__row">
+                <div class="calc__colitem js-calc__date-item calc__date-item calc__colitem-item_active">
+                    <div class="calc__colitem-name"><span>В течение месяца</span></div>
+                </div>
+                <div class="calc__colitem js-calc__date-item calc__date-item">
+                    <div class="calc__colitem-name"><span>В течение трех месяцев</span></div>
+                </div>
+                <div class="calc__colitem js-calc__date-item calc__date-item">
+                    <div class="calc__colitem-name"><span>В течение шести месяцев</span></div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="calc__technic">
             <h2 class="calc__header">Бытовая техника</h2>
             <div class="calc__technic-row">
@@ -348,7 +287,6 @@
             <h2 class="calc__header">Заявка</h2>
             <div class="calc__row">
                 <form id="calc-send" class="calc__order-form" action="">
-                    <input type="hidden" name="calc-model">
                     <input type="hidden" name="calc-form">
                     <input type="hidden" name="calc-material">
                     <input type="hidden" name="calc-map-m">
@@ -356,6 +294,8 @@
                     <input type="hidden" name="calc-size">
                     <input type="hidden" name="calc-height">
                     <input type="hidden" name="calc-table">
+                    <input type="hidden" name="calc-furniture">
+                    <input type="hidden" name="calc-date">
                     <input type="hidden" name="calc-technic">
                     <div class="calc__order-row">
                         <label for="">Имя</label>
@@ -375,8 +315,8 @@
                             <select class="calc__order-input" name="city" required>
                                 <option value="Москва">Москва</option>
                                 <option value="Киров">Киров</option>
-                                <option value="Казань">Казань</option>
                                 <option value="Пермь">Пермь</option>
+                                <option value="Казань">Казань</option>
                                 <option value="Нижний Новгород">Нижний Новгород</option>
                                 <option value="Сыктывкар">Сыктывкар</option>
                             </select>
@@ -400,25 +340,25 @@
                         <span class="label">Куда отправить расчет</span>
                         <div class="calc__order-group">
                             <div class="calc__order-radio">
-                                <input type="radio" class="js-calc__order-radio" id="calc__order-radio1" name="calc__order-receiver" value="Viber">
+                                <input type="radio" class="js-calc__order-radio" id="calc__order-radio1" name="calc__order-receiver" value="Viber" checked>
                                 <label for="calc__order-radio1">Viber</label>
                             </div>
                             <div class="calc__order-radio">
                                 <input type="radio" class="js-calc__order-radio" id="calc__order-radio2" name="calc__order-receiver" value="WhatsApp">
                                 <label for="calc__order-radio2">WhatsApp</label>
                             </div>
-                            <div class="calc__order-radio">
+                            <!-- <div class="calc__order-radio">
                                 <input type="radio" class="js-calc__order-radio" id="calc__order-radio3" name="calc__order-receiver" checked value="Email">
                                 <label for="calc__order-radio3">Email</label>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
-                    <div class="calc__order-row calc__order-row__email">
+                    <!-- <div class="calc__order-row calc__order-row__email">
                         <label for="">Email</label>
                         <div class="calc__order-group">
                             <input type="email" name="email" class="calc__order-input" required>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="calc__order-row">
                         <label for="">Ваши пожелания</label>
                         <div class="calc__order-group">

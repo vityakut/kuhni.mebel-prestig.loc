@@ -148,6 +148,7 @@ $phone: 'screen and (max-width: 767px)'
         @extend .calc_block
         &-item
             @extend .calc__colitem-item
+            flex-basis: calc(50% - 5px)
 
     &__height
         @extend .calc_block
@@ -302,9 +303,23 @@ $phone: 'screen and (max-width: 767px)'
             @extend .calc__colitem-item
             align-items: center
             justify-content: center
+            flex-basis: calc(33% - 5px)
             span.size
                 font-size: 0.8em
                 color: #333333
+
+    &__furniture
+        @extend .calc_block
+        &-item
+            @extend .calc__colitem-item
+            flex-basis: calc(50% - 5px)
+
+    &__date
+        @extend .calc_block
+        &-item
+            @extend .calc__colitem-item
+            flex-basis: calc(33% - 5px)
+
 
     &__technic
         @extend .calc_block
@@ -379,7 +394,7 @@ $phone: 'screen and (max-width: 767px)'
             display: flex
             flex-direction: row
             align-items: center
-            justify-content: space-between
+            justify-content: space-evenly
             flex-wrap: wrap
             @media #{$phone}
                 width: 100%

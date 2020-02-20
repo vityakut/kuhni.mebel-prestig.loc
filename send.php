@@ -24,6 +24,8 @@ $ru = array(
 	'calc-size' => 'Размеры стен',
 	'calc-height' => 'Высота верхних полок',
 	'calc-table' => 'Материал столещницы',
+	'calc-furniture' => 'Фурнитура',
+	'calc-date' => 'Когда планируют приобрести',
 	'calc-technic' => 'Бытовая техника',
 );
 
@@ -59,7 +61,9 @@ function sendEmail($html){
 	$subject = $html['title'].' с сайта '.$config->siteName;
 	$headers = array();
 	$headers[] = 'From: "'.$config->siteName.'" <'.$config->mailFrom.'>';
-	$headers[] = 'Reply-To: '.$html['body']['email'];
+	if (isset($html['body']['email'])){
+		$headers[] = 'Reply-To: '.$html['body']['email'];
+	}
 	$headers[] = 'Return-Path: '.$to;
 	$headers[] = "Content-Type: text/html; charset=UTF-8";
 	$headers[] = 'MIME-Version: 1.0';

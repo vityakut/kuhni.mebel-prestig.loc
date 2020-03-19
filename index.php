@@ -58,6 +58,9 @@
                     <div class="calc__colitem-name"><span>МДФ + ПВХ</span></div>
                 </div>
                 <div class="calc__colitem js-calc__material-item calc__material-item">
+                    <div class="calc__colitem-name"><span>МДФ + пластик</span></div>
+                </div>
+                <div class="calc__colitem js-calc__material-item calc__material-item">
                     <div class="calc__colitem-name"><span>МДФ + эмаль</span></div>
                 </div>
             </div>

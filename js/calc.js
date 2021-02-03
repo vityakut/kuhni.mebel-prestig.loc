@@ -206,23 +206,25 @@
                 data: data,
                 dataType: "json",
                 success: function (response) {
-                    $('<h4>Заявка отправлена. В ближайшее время с Вами свяжется наш менеджер</h4>').insertBefore(form);
-                    $(form).fadeOut();
-                    if ($(".calc__order-dropdown").length > 0) {
-                        $(".success-row").remove();
-                        $(".calc__order-dropdown span").show();
-                    }
-                    $.each(form.find('input:not([type=button]):not([type=submit]), textarea'), function(index, el) {
-                        if (($(el).attr('type') == "checkbox") || ($(el).attr('type') == "radio")) {
-                            $(el).prop("checked", false);
-                        } else{
-                            $(el).val("");
+                    $(form).fadeOut('fast', function () {
+                        if ($(".calc__order-dropdown").length > 0) {
+                            $(".success-row").remove();
+                            $(".calc__order-dropdown span").show();
                         }
+                        $('<h4 class="calc__order-success">Заявка отправлена. В ближайшее время с Вами свяжется наш менеджер</h4>').insertBefore(form);
+                        $.each(form.find('input:not([type=button]):not([type=submit]), textarea'), function (index, el) {
+                            if (($(el).attr('type') == "checkbox") || ($(el).attr('type') == "radio")) {
+                                $(el).prop("checked", false);
+                            } else {
+                                $(el).val("");
+                            }
+                        });
+                        setTimeout(function () {
+                            $(form).fadeIn();
+                            form.siblings('h4').remove();
+                        }, 12000);
                     });
-                    setTimeout(function () {
-                        $(form).fadeIn();
-                        form.siblings('h4').remove();
-                    }, 3000);
+
                 },
                 error: function (error) {
                     console.error('error');

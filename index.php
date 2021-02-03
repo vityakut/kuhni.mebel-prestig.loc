@@ -6,7 +6,7 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Кухни мебельная фабрика Престиж Киров" />
 	<meta name="description" content="Кухни в Кирове" />
-	<title>Кухни г.Киров</title>
+	<title>Кухни на заказ</title>
 	<link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
     <meta name="viewport" content="width=1280">
     <link rel="stylesheet" href="/css/template.css" type="text/css" />
@@ -288,7 +288,7 @@
         </div>
         <div class="calc__order">
             <h2 class="calc__header">Заявка</h2>
-            <div class="calc__row">
+            <div class="calc__row_center">
                 <form id="calc-send" class="calc__order-form" action="">
                     <input type="hidden" name="calc-form">
                     <input type="hidden" name="calc-material">
@@ -322,6 +322,7 @@
                                 <option value="Казань">Казань</option>
                                 <option value="Нижний Новгород">Нижний Новгород</option>
                                 <option value="Сыктывкар">Сыктывкар</option>
+                                <option value="Ижевск">Ижевск</option>
                             </select>
                         </div>
                     </div>
@@ -372,9 +373,7 @@
                         <button class="calc__btn js-calc__order-submit">Отправить</button>
                     </div>
                 </form>
-                <div class="calc__order-alert">
-                    <span>В ближайшее время вам отправят расчет вашей кухни.</span>
-                </div>
+
             </div>
         </div>
 
@@ -392,7 +391,31 @@
     </div>
 </div>
 
+<div class="calc__modal">
+<div class="calc__modal-close"></div>
+<div class="calc__modal-body">
+</div>
+</div>
 
+<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?168",t.onload=function(){VK.Retargeting.Init("VK-RTRG-544459-95LqS"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-544459-95LqS" alt=""/></noscript>
 
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '369305397637897');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1"
+src="https://www.facebook.com/tr?id=369305397637897&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
 </body>
+
 </html>

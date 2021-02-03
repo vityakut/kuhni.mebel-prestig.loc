@@ -2,6 +2,8 @@
 $blueDark:  #000045
 $gray:      #e2e2e2
 $phone: 'screen and (max-width: 767px)'
+body
+    font-family: Arial, sans-serif
 
 .calc
     &__btn
@@ -32,7 +34,7 @@ $phone: 'screen and (max-width: 767px)'
         line-height: 120%
         color: $blueDark
         text-align: center
-        font-family: Verdana
+        font-family: Arial, Helvetica, sans-serif
         margin-bottom: 17px
         padding: 5px 10px 8px 0px
         font-weight: lighter
@@ -103,7 +105,10 @@ $phone: 'screen and (max-width: 767px)'
         & .calc__header
             @extend .calc__header
             background: $gray
-            font-size: 22px
+            font-size: 24px
+            font-weight: bold
+            padding-top: 15px
+            padding-bottom: 15px
 
     &__models
         @extend .calc_block
@@ -362,6 +367,12 @@ $phone: 'screen and (max-width: 767px)'
             @media #{$phone}
                 flex-basis: 100%
 
+        &-success
+            font-size: 26px
+            padding: 40px 35px
+            font-weight: bold
+            color: #ffffff
+            background: $blueDark
 
         label, .label
             font-size: 18px

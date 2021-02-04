@@ -28,6 +28,7 @@ body
             justify-content: center
         @media #{$phone}
             flex-wrap: wrap
+            justify-content: center
     &__header
         text-align: center
         font-size: 32px
@@ -48,8 +49,7 @@ body
         padding: 5px
         margin: 0 10px
         @media #{$phone}
-            flex-basis: 100%
-
+            flex-basis: calc(50% - 40px)
         &-image
             // height: 180px
             width: 100%
@@ -69,6 +69,8 @@ body
             color: $blueDark
             text-align: center
             padding: 10px 0
+            @media #{$phone}
+                font-size: 15px
         &-item
             border: 2px solid transparent
             cursor: pointer
@@ -93,6 +95,7 @@ body
                 display: flex
                 height: 20px
                 width: 20px
+                min-width: 20px
                 border: 2px solid $blueDark
                 content: ""
                 margin-right: 10px
@@ -167,14 +170,22 @@ body
             flex-basis: calc(40% - 5px)
             @media #{$phone}
                 flex-basis: 100%
+                align-items: center
         .calc__colitem-image
             position: relative
+            @media #{$phone}
+                width: 260px
             .calc__map-item__pos
                 $height: 85px
                 $width: 85px
-                position: absolute
+                $m_height: 46px
+                $m_width: 46px
                 width: $width
                 height: $height
+                @media #{$phone}
+                    width: $m_width
+                    height: $m_height
+                position: absolute
                 cursor: pointer
                 // border: 1px solid red
                 // background: rgba(red, 0.2)
@@ -183,68 +194,156 @@ body
                         @extend .calc__map-item__pos
                 @for $num from 1 through 4
                     &-m1#{$num}, &-d1#{$num}
-                        left: 68px + $width * ($num - 1)
-                        top: 2px
+                        $top: 2px
+                        $left: 68px
+                        top: $top
+                        left: $left + $width * ($num - 1)
+                        @media #{$phone}
+                            $top: 1px
+                            $left: 37px
+                            top: $top
+                            left: $left + $m_width * ($num - 1)
                 @for $num from 1 through 2
                     &-m2#{$num}
-                        left: 2px
-                        top: 142px - $height * ($num - 1)
+                        $left: 2px
+                        $top: 142px
+                        left: $left
+                        top: $top - $height * ($num - 1)
+                        @media #{$phone}
+                            $top: 77px
+                            $left: 0px
+                            left: $left
+                            top: $top - $m_height * ($num - 1)
                 @for $num from 3 through 6
-                    $width: 90px
                     &-m2#{$num}
-                        left: 60px + $width * ($num - 3)
-                        top: 2px
+                        $width: 90px
+                        $top: 2px
+                        $left: 60px
+                        left: $left + $width * ($num - 3)
+                        top: $top
+                        @media #{$phone}
+                            $m_width: 49px
+                            $top: 0px
+                            $left: 33px
+                            left: $left + $m_width * ($num - 3)
+                            top: $top
                 @for $num from 7 through 8
                     &-m2#{$num}
-                        right: 2px
-                        top: (142px - $height) + ($height * ($num - 7))
+                        $right: 2px
+                        $top: 142px
+                        right: $right
+                        top: ($top - $height) + ($height * ($num - 7))
+                        @media #{$phone}
+                            $top: 77px
+                            $right: 0px
+                            right: $right
+                            top: ($top - $m_height) + ($m_height * ($num - 7))
                 &-d21
                     left: 2px
                     top: 125px
+                    @media #{$phone}
+                        left: 1px
+                        top: 68px
                 &-d22
                     left: 195px
                     top: 2px
+                    @media #{$phone}
+                        top: 1px
+                        left: 106px
                 &-d23
                     right: 2px
                     top: 125px
+                    @media #{$phone}
+                        right: 1px
+                        top: 68px
                 @for $num from 1 through 2
-                    $height: 107px
                     &-m3#{$num}
-                        left: 2px
-                        top: 164px - $height * ($num - 1)
+                        $height: 107px
+                        $left: 2px
+                        $top: 164px
+                        left: $left
+                        top: $top - $height * ($num - 1)
+                        @media #{$phone}
+                            $m_height: 60px
+                            $left: 1px
+                            $top: 91px
+                            left: $left
+                            top: $top - $m_height * ($num - 1)
                 @for $num from 3 through 5
                     $width: 107px
+                    $left: 60px
+                    $top: 2px
                     &-m3#{$num}
-                        left: 60px + $width * ($num - 3)
-                        top: 2px
+                        left: $left + $width * ($num - 3)
+                        top: $top
+                        @media #{$phone}
+                            $m_width: 58px
+                            $left: 33px
+                            $top: 1px
+                            left: $left + $m_width * ($num - 3)
+                            top: $top
                 &-d31
                     left: 2px
                     top: 125px
+                    @media #{$phone}
+                        left: 1px
+                        top: 68px
                 &-d32
                     left: 126px
                     top: 2px
+                    @media #{$phone}
+                        left: 68px
+                        top: 1px
                 &-d33
                     left: 262px
                     top: 2px
+                    @media #{$phone}
+                        left: 144px
+                        top: 1px
                 @for $num from 1 through 3
-                    $width: 107px
                     &-m4#{$num}
-                        left: 118px + $width * ($num - 1)
-                        top: 2px
+                        $width: 107px
+                        $left: 118px
+                        $top: 2px
+                        left: $left + $width * ($num - 1)
+                        top: $top
+                        @media #{$phone}
+                            $m_width: 58px
+                            $left: 64px
+                            $top: 1px
+                            left: $left + $m_width * ($num - 1)
+                            top: $top
                 @for $num from 4 through 5
-                    $height: 107px
                     &-m4#{$num}
-                        right: 2px
-                        top: (164px - $height) + $height * ($num - 4)
+                        $height: 107px
+                        $right: 2px
+                        $top: 164px
+                        right: $right
+                        top: ($top - $height) + $height * ($num - 4)
+                        @media #{$phone}
+                            $m_height: 58px
+                            $right: 1px
+                            $top: 91px
+                            right: $right
+                            top: ($top - $m_height) + $m_height * ($num - 4)
                 &-d41
                     left: 126px
                     top: 2px
+                    @media #{$phone}
+                        left: 69px
+                        top: 1px
                 &-d42
                     left: 262px
                     top: 2px
+                    @media #{$phone}
+                        left: 144px
+                        top: 1px
                 &-d43
                     right: 2px
                     top: 125px
+                    @media #{$phone}
+                        right: 1px
+                        top: 69px
 
     &__sizes
         @extend .calc_block
@@ -274,6 +373,11 @@ body
                 text-align: center
                 position: relative
                 z-index: 100
+                @media #{$phone}
+                    width: 50px
+                    height: 40px
+                    margin: 10px
+                    font-size: 16px
                 &::-webkit-inner-spin-button, &::-webkit-outer-spin-button
                     display: none
         input, input[type=number], input[type=text]
@@ -308,7 +412,8 @@ body
             @extend .calc__colitem-item
             align-items: center
             justify-content: center
-            flex-basis: calc(33% - 5px)
+            @media #{$phone}
+                flex-basis: 100%
             span.size
                 font-size: 0.8em
                 color: #333333
@@ -324,6 +429,8 @@ body
         &-item
             @extend .calc__colitem-item
             flex-basis: calc(33% - 5px)
+            @media #{$phone}
+                flex-basis: 100%
 
 
     &__technic
@@ -334,6 +441,8 @@ body
         &-checkbox
             @extend .calc__checkbox
             flex-basis: 50%
+            @media #{$phone}
+                flex-basis: 100%
 
     &__order
         @extend .calc_block
@@ -473,3 +582,26 @@ body
                 border-radius: 5px
                 margin-right: 5px
                 box-shadow: 0 0 8px rgba(175, 175, 175, 0.5)
+
+
+@media #{$phone}
+    .header
+        background: linear-gradient( to bottom, #c9bbd6, #4f80a8);
+        padding: 0
+        height: auto
+    .logo
+        float: none
+        height: auto
+        a
+            img
+                margin: 0!important
+
+.footer
+    height: auto
+    &-container
+        padding: 0
+    &-copyright
+        max-width: calc(100% - 30px)
+        text-align: center
+        font-size: 0.7em
+        padding: 5px 15px

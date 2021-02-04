@@ -308,6 +308,9 @@ body {
   .calc__row, .calc__row_center, .calc__technic-row {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -340,8 +343,8 @@ body {
 
 @media screen and (max-width: 767px) {
   .calc__colitem, .calc__map-item, .calc__sizes-item {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    -ms-flex-preferred-size: calc(50% - 40px);
+        flex-basis: calc(50% - 40px);
   }
 }
 
@@ -372,6 +375,12 @@ body {
   color: #000045;
   text-align: center;
   padding: 10px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__colitem-name {
+    font-size: 15px;
+  }
 }
 
 .calc__colitem-item, .calc__models-item, .calc__form-item, .calc__material-item, .calc__height-item, .calc__table-item, .calc__furniture-item, .calc__date-item, .calc__order-form, .calc__order-alert {
@@ -419,6 +428,7 @@ body {
   display: flex;
   height: 20px;
   width: 20px;
+  min-width: 20px;
   border: 2px solid #000045;
   content: "";
   margin-right: 10px;
@@ -505,6 +515,9 @@ body {
   .calc__map-item {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -512,31 +525,72 @@ body {
   position: relative;
 }
 
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image, .calc__map .calc__sizes-image {
+    width: 260px;
+  }
+}
+
 .calc__map .calc__colitem-image .calc__map-item__pos, .calc__map .calc__sizes-image .calc__map-item__pos, .calc__map .calc__colitem-image .calc__map-item__pos-m11, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m11, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m11, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m11, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m11, .calc__map .calc__sizes-image .calc__map-item__pos-m11, .calc__map .calc__colitem-image .calc__map-item__pos-d11, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d11, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d11, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d11, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d11, .calc__map .calc__sizes-image .calc__map-item__pos-d11, .calc__map .calc__colitem-image .calc__map-item__pos-m12, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m12, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m12, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m12, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m12, .calc__map .calc__sizes-image .calc__map-item__pos-m12, .calc__map .calc__colitem-image .calc__map-item__pos-d12, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d12, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d12, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d12, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d12, .calc__map .calc__sizes-image .calc__map-item__pos-d12, .calc__map .calc__colitem-image .calc__map-item__pos-m13, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m13, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m13, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m13, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m13, .calc__map .calc__sizes-image .calc__map-item__pos-m13, .calc__map .calc__colitem-image .calc__map-item__pos-d13, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d13, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d13, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d13, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d13, .calc__map .calc__sizes-image .calc__map-item__pos-d13, .calc__map .calc__colitem-image .calc__map-item__pos-m14, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m14, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m14, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m14, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m14, .calc__map .calc__sizes-image .calc__map-item__pos-m14, .calc__map .calc__colitem-image .calc__map-item__pos-d14, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d14, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d14, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d14, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d14, .calc__map .calc__sizes-image .calc__map-item__pos-d14, .calc__map .calc__colitem-image .calc__map-item__pos-m15, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m15, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m15, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m15, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m15, .calc__map .calc__sizes-image .calc__map-item__pos-m15, .calc__map .calc__colitem-image .calc__map-item__pos-d15, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d15, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d15, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d15, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d15, .calc__map .calc__sizes-image .calc__map-item__pos-d15, .calc__map .calc__colitem-image .calc__map-item__pos-m16, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m16, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m16, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m16, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m16, .calc__map .calc__sizes-image .calc__map-item__pos-m16, .calc__map .calc__colitem-image .calc__map-item__pos-d16, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d16, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d16, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d16, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d16, .calc__map .calc__sizes-image .calc__map-item__pos-d16, .calc__map .calc__colitem-image .calc__map-item__pos-m17, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m17, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m17, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m17, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m17, .calc__map .calc__sizes-image .calc__map-item__pos-m17, .calc__map .calc__colitem-image .calc__map-item__pos-d17, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d17, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d17, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d17, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d17, .calc__map .calc__sizes-image .calc__map-item__pos-d17, .calc__map .calc__colitem-image .calc__map-item__pos-m18, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m18, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m18, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m18, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m18, .calc__map .calc__sizes-image .calc__map-item__pos-m18, .calc__map .calc__colitem-image .calc__map-item__pos-d18, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d18, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d18, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d18, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d18, .calc__map .calc__sizes-image .calc__map-item__pos-d18, .calc__map .calc__colitem-image .calc__map-item__pos-m19, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m19, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m19, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m19, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m19, .calc__map .calc__sizes-image .calc__map-item__pos-m19, .calc__map .calc__colitem-image .calc__map-item__pos-d19, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d19, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d19, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d19, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d19, .calc__map .calc__sizes-image .calc__map-item__pos-d19, .calc__map .calc__colitem-image .calc__map-item__pos-m20, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m20, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m20, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m20, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m20, .calc__map .calc__sizes-image .calc__map-item__pos-m20, .calc__map .calc__colitem-image .calc__map-item__pos-d20, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d20, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d20, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d20, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d20, .calc__map .calc__sizes-image .calc__map-item__pos-d20, .calc__map .calc__colitem-image .calc__map-item__pos-m21, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m21, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m21, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m21, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m21, .calc__map .calc__sizes-image .calc__map-item__pos-m21, .calc__map .calc__colitem-image .calc__map-item__pos-d21, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d21, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d21, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d21, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d21, .calc__map .calc__sizes-image .calc__map-item__pos-d21, .calc__map .calc__colitem-image .calc__map-item__pos-m22, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m22, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m22, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m22, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m22, .calc__map .calc__sizes-image .calc__map-item__pos-m22, .calc__map .calc__colitem-image .calc__map-item__pos-d22, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d22, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d22, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d22, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d22, .calc__map .calc__sizes-image .calc__map-item__pos-d22, .calc__map .calc__colitem-image .calc__map-item__pos-m23, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m23, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m23, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m23, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m23, .calc__map .calc__sizes-image .calc__map-item__pos-m23, .calc__map .calc__colitem-image .calc__map-item__pos-d23, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d23, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d23, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d23, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d23, .calc__map .calc__sizes-image .calc__map-item__pos-d23, .calc__map .calc__colitem-image .calc__map-item__pos-m24, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m24, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m24, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m24, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m24, .calc__map .calc__sizes-image .calc__map-item__pos-m24, .calc__map .calc__colitem-image .calc__map-item__pos-d24, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d24, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d24, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d24, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d24, .calc__map .calc__sizes-image .calc__map-item__pos-d24, .calc__map .calc__colitem-image .calc__map-item__pos-m25, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m25, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m25, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m25, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m25, .calc__map .calc__sizes-image .calc__map-item__pos-m25, .calc__map .calc__colitem-image .calc__map-item__pos-d25, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d25, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d25, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d25, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d25, .calc__map .calc__sizes-image .calc__map-item__pos-d25, .calc__map .calc__colitem-image .calc__map-item__pos-m26, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m26, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m26, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m26, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m26, .calc__map .calc__sizes-image .calc__map-item__pos-m26, .calc__map .calc__colitem-image .calc__map-item__pos-d26, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d26, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d26, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d26, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d26, .calc__map .calc__sizes-image .calc__map-item__pos-d26, .calc__map .calc__colitem-image .calc__map-item__pos-m27, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m27, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m27, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m27, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m27, .calc__map .calc__sizes-image .calc__map-item__pos-m27, .calc__map .calc__colitem-image .calc__map-item__pos-d27, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d27, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d27, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d27, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d27, .calc__map .calc__sizes-image .calc__map-item__pos-d27, .calc__map .calc__colitem-image .calc__map-item__pos-m28, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m28, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m28, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m28, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m28, .calc__map .calc__sizes-image .calc__map-item__pos-m28, .calc__map .calc__colitem-image .calc__map-item__pos-d28, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d28, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d28, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d28, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d28, .calc__map .calc__sizes-image .calc__map-item__pos-d28, .calc__map .calc__colitem-image .calc__map-item__pos-m29, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m29, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m29, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m29, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m29, .calc__map .calc__sizes-image .calc__map-item__pos-m29, .calc__map .calc__colitem-image .calc__map-item__pos-d29, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d29, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d29, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d29, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d29, .calc__map .calc__sizes-image .calc__map-item__pos-d29, .calc__map .calc__colitem-image .calc__map-item__pos-m30, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m30, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m30, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m30, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m30, .calc__map .calc__sizes-image .calc__map-item__pos-m30, .calc__map .calc__colitem-image .calc__map-item__pos-d30, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d30, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d30, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d30, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d30, .calc__map .calc__sizes-image .calc__map-item__pos-d30, .calc__map .calc__colitem-image .calc__map-item__pos-m31, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m31, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m31, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m31, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m31, .calc__map .calc__sizes-image .calc__map-item__pos-m31, .calc__map .calc__colitem-image .calc__map-item__pos-d31, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d31, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d31, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d31, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d31, .calc__map .calc__sizes-image .calc__map-item__pos-d31, .calc__map .calc__colitem-image .calc__map-item__pos-m32, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m32, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m32, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m32, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m32, .calc__map .calc__sizes-image .calc__map-item__pos-m32, .calc__map .calc__colitem-image .calc__map-item__pos-d32, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d32, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d32, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d32, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d32, .calc__map .calc__sizes-image .calc__map-item__pos-d32, .calc__map .calc__colitem-image .calc__map-item__pos-m33, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m33, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m33, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m33, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m33, .calc__map .calc__sizes-image .calc__map-item__pos-m33, .calc__map .calc__colitem-image .calc__map-item__pos-d33, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d33, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d33, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d33, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d33, .calc__map .calc__sizes-image .calc__map-item__pos-d33, .calc__map .calc__colitem-image .calc__map-item__pos-m34, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m34, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m34, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m34, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m34, .calc__map .calc__sizes-image .calc__map-item__pos-m34, .calc__map .calc__colitem-image .calc__map-item__pos-d34, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d34, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d34, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d34, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d34, .calc__map .calc__sizes-image .calc__map-item__pos-d34, .calc__map .calc__colitem-image .calc__map-item__pos-m35, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m35, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m35, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m35, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m35, .calc__map .calc__sizes-image .calc__map-item__pos-m35, .calc__map .calc__colitem-image .calc__map-item__pos-d35, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d35, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d35, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d35, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d35, .calc__map .calc__sizes-image .calc__map-item__pos-d35, .calc__map .calc__colitem-image .calc__map-item__pos-m36, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m36, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m36, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m36, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m36, .calc__map .calc__sizes-image .calc__map-item__pos-m36, .calc__map .calc__colitem-image .calc__map-item__pos-d36, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d36, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d36, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d36, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d36, .calc__map .calc__sizes-image .calc__map-item__pos-d36, .calc__map .calc__colitem-image .calc__map-item__pos-m37, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m37, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m37, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m37, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m37, .calc__map .calc__sizes-image .calc__map-item__pos-m37, .calc__map .calc__colitem-image .calc__map-item__pos-d37, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d37, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d37, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d37, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d37, .calc__map .calc__sizes-image .calc__map-item__pos-d37, .calc__map .calc__colitem-image .calc__map-item__pos-m38, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m38, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m38, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m38, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m38, .calc__map .calc__sizes-image .calc__map-item__pos-m38, .calc__map .calc__colitem-image .calc__map-item__pos-d38, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d38, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d38, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d38, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d38, .calc__map .calc__sizes-image .calc__map-item__pos-d38, .calc__map .calc__colitem-image .calc__map-item__pos-m39, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m39, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m39, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m39, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m39, .calc__map .calc__sizes-image .calc__map-item__pos-m39, .calc__map .calc__colitem-image .calc__map-item__pos-d39, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d39, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d39, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d39, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d39, .calc__map .calc__sizes-image .calc__map-item__pos-d39, .calc__map .calc__colitem-image .calc__map-item__pos-m40, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m40, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m40, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m40, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m40, .calc__map .calc__sizes-image .calc__map-item__pos-m40, .calc__map .calc__colitem-image .calc__map-item__pos-d40, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d40, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d40, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d40, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d40, .calc__map .calc__sizes-image .calc__map-item__pos-d40, .calc__map .calc__colitem-image .calc__map-item__pos-m41, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m41, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m41, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m41, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m41, .calc__map .calc__sizes-image .calc__map-item__pos-m41, .calc__map .calc__colitem-image .calc__map-item__pos-d41, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d41, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d41, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d41, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d41, .calc__map .calc__sizes-image .calc__map-item__pos-d41, .calc__map .calc__colitem-image .calc__map-item__pos-m42, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m42, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m42, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m42, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m42, .calc__map .calc__sizes-image .calc__map-item__pos-m42, .calc__map .calc__colitem-image .calc__map-item__pos-d42, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d42, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d42, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d42, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d42, .calc__map .calc__sizes-image .calc__map-item__pos-d42, .calc__map .calc__colitem-image .calc__map-item__pos-m43, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m43, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m43, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m43, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m43, .calc__map .calc__sizes-image .calc__map-item__pos-m43, .calc__map .calc__colitem-image .calc__map-item__pos-d43, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d43, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d43, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d43, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d43, .calc__map .calc__sizes-image .calc__map-item__pos-d43, .calc__map .calc__colitem-image .calc__map-item__pos-m44, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m44, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m44, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m44, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m44, .calc__map .calc__sizes-image .calc__map-item__pos-m44, .calc__map .calc__colitem-image .calc__map-item__pos-d44, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d44, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d44, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d44, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d44, .calc__map .calc__sizes-image .calc__map-item__pos-d44, .calc__map .calc__colitem-image .calc__map-item__pos-m45, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m45, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m45, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m45, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m45, .calc__map .calc__sizes-image .calc__map-item__pos-m45, .calc__map .calc__colitem-image .calc__map-item__pos-d45, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d45, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d45, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d45, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d45, .calc__map .calc__sizes-image .calc__map-item__pos-d45, .calc__map .calc__colitem-image .calc__map-item__pos-m46, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m46, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m46, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m46, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m46, .calc__map .calc__sizes-image .calc__map-item__pos-m46, .calc__map .calc__colitem-image .calc__map-item__pos-d46, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d46, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d46, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d46, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d46, .calc__map .calc__sizes-image .calc__map-item__pos-d46, .calc__map .calc__colitem-image .calc__map-item__pos-m47, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m47, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m47, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m47, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m47, .calc__map .calc__sizes-image .calc__map-item__pos-m47, .calc__map .calc__colitem-image .calc__map-item__pos-d47, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d47, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d47, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d47, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d47, .calc__map .calc__sizes-image .calc__map-item__pos-d47, .calc__map .calc__colitem-image .calc__map-item__pos-m48, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m48, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m48, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m48, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m48, .calc__map .calc__sizes-image .calc__map-item__pos-m48, .calc__map .calc__colitem-image .calc__map-item__pos-d48, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d48, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d48, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d48, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d48, .calc__map .calc__sizes-image .calc__map-item__pos-d48, .calc__map .calc__colitem-image .calc__map-item__pos-m49, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m49, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m49, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m49, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m49, .calc__map .calc__sizes-image .calc__map-item__pos-m49, .calc__map .calc__colitem-image .calc__map-item__pos-d49, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d49, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d49, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d49, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d49, .calc__map .calc__sizes-image .calc__map-item__pos-d49 {
-  position: absolute;
   width: 85px;
   height: 85px;
+  position: absolute;
   cursor: pointer;
 }
 
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos, .calc__map .calc__sizes-image .calc__map-item__pos, .calc__map .calc__colitem-image .calc__map-item__pos-m11, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m11, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m11, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m11, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m11, .calc__map .calc__sizes-image .calc__map-item__pos-m11, .calc__map .calc__colitem-image .calc__map-item__pos-d11, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d11, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d11, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d11, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d11, .calc__map .calc__sizes-image .calc__map-item__pos-d11, .calc__map .calc__colitem-image .calc__map-item__pos-m12, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m12, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m12, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m12, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m12, .calc__map .calc__sizes-image .calc__map-item__pos-m12, .calc__map .calc__colitem-image .calc__map-item__pos-d12, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d12, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d12, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d12, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d12, .calc__map .calc__sizes-image .calc__map-item__pos-d12, .calc__map .calc__colitem-image .calc__map-item__pos-m13, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m13, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m13, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m13, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m13, .calc__map .calc__sizes-image .calc__map-item__pos-m13, .calc__map .calc__colitem-image .calc__map-item__pos-d13, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d13, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d13, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d13, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d13, .calc__map .calc__sizes-image .calc__map-item__pos-d13, .calc__map .calc__colitem-image .calc__map-item__pos-m14, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m14, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m14, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m14, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m14, .calc__map .calc__sizes-image .calc__map-item__pos-m14, .calc__map .calc__colitem-image .calc__map-item__pos-d14, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d14, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d14, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d14, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d14, .calc__map .calc__sizes-image .calc__map-item__pos-d14, .calc__map .calc__colitem-image .calc__map-item__pos-m15, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m15, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m15, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m15, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m15, .calc__map .calc__sizes-image .calc__map-item__pos-m15, .calc__map .calc__colitem-image .calc__map-item__pos-d15, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d15, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d15, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d15, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d15, .calc__map .calc__sizes-image .calc__map-item__pos-d15, .calc__map .calc__colitem-image .calc__map-item__pos-m16, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m16, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m16, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m16, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m16, .calc__map .calc__sizes-image .calc__map-item__pos-m16, .calc__map .calc__colitem-image .calc__map-item__pos-d16, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d16, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d16, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d16, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d16, .calc__map .calc__sizes-image .calc__map-item__pos-d16, .calc__map .calc__colitem-image .calc__map-item__pos-m17, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m17, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m17, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m17, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m17, .calc__map .calc__sizes-image .calc__map-item__pos-m17, .calc__map .calc__colitem-image .calc__map-item__pos-d17, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d17, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d17, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d17, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d17, .calc__map .calc__sizes-image .calc__map-item__pos-d17, .calc__map .calc__colitem-image .calc__map-item__pos-m18, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m18, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m18, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m18, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m18, .calc__map .calc__sizes-image .calc__map-item__pos-m18, .calc__map .calc__colitem-image .calc__map-item__pos-d18, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d18, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d18, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d18, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d18, .calc__map .calc__sizes-image .calc__map-item__pos-d18, .calc__map .calc__colitem-image .calc__map-item__pos-m19, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m19, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m19, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m19, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m19, .calc__map .calc__sizes-image .calc__map-item__pos-m19, .calc__map .calc__colitem-image .calc__map-item__pos-d19, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d19, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d19, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d19, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d19, .calc__map .calc__sizes-image .calc__map-item__pos-d19, .calc__map .calc__colitem-image .calc__map-item__pos-m20, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m20, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m20, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m20, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m20, .calc__map .calc__sizes-image .calc__map-item__pos-m20, .calc__map .calc__colitem-image .calc__map-item__pos-d20, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d20, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d20, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d20, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d20, .calc__map .calc__sizes-image .calc__map-item__pos-d20, .calc__map .calc__colitem-image .calc__map-item__pos-m21, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m21, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m21, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m21, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m21, .calc__map .calc__sizes-image .calc__map-item__pos-m21, .calc__map .calc__colitem-image .calc__map-item__pos-d21, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d21, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d21, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d21, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d21, .calc__map .calc__sizes-image .calc__map-item__pos-d21, .calc__map .calc__colitem-image .calc__map-item__pos-m22, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m22, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m22, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m22, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m22, .calc__map .calc__sizes-image .calc__map-item__pos-m22, .calc__map .calc__colitem-image .calc__map-item__pos-d22, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d22, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d22, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d22, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d22, .calc__map .calc__sizes-image .calc__map-item__pos-d22, .calc__map .calc__colitem-image .calc__map-item__pos-m23, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m23, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m23, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m23, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m23, .calc__map .calc__sizes-image .calc__map-item__pos-m23, .calc__map .calc__colitem-image .calc__map-item__pos-d23, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d23, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d23, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d23, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d23, .calc__map .calc__sizes-image .calc__map-item__pos-d23, .calc__map .calc__colitem-image .calc__map-item__pos-m24, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m24, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m24, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m24, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m24, .calc__map .calc__sizes-image .calc__map-item__pos-m24, .calc__map .calc__colitem-image .calc__map-item__pos-d24, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d24, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d24, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d24, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d24, .calc__map .calc__sizes-image .calc__map-item__pos-d24, .calc__map .calc__colitem-image .calc__map-item__pos-m25, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m25, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m25, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m25, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m25, .calc__map .calc__sizes-image .calc__map-item__pos-m25, .calc__map .calc__colitem-image .calc__map-item__pos-d25, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d25, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d25, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d25, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d25, .calc__map .calc__sizes-image .calc__map-item__pos-d25, .calc__map .calc__colitem-image .calc__map-item__pos-m26, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m26, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m26, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m26, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m26, .calc__map .calc__sizes-image .calc__map-item__pos-m26, .calc__map .calc__colitem-image .calc__map-item__pos-d26, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d26, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d26, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d26, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d26, .calc__map .calc__sizes-image .calc__map-item__pos-d26, .calc__map .calc__colitem-image .calc__map-item__pos-m27, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m27, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m27, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m27, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m27, .calc__map .calc__sizes-image .calc__map-item__pos-m27, .calc__map .calc__colitem-image .calc__map-item__pos-d27, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d27, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d27, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d27, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d27, .calc__map .calc__sizes-image .calc__map-item__pos-d27, .calc__map .calc__colitem-image .calc__map-item__pos-m28, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m28, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m28, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m28, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m28, .calc__map .calc__sizes-image .calc__map-item__pos-m28, .calc__map .calc__colitem-image .calc__map-item__pos-d28, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d28, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d28, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d28, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d28, .calc__map .calc__sizes-image .calc__map-item__pos-d28, .calc__map .calc__colitem-image .calc__map-item__pos-m29, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m29, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m29, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m29, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m29, .calc__map .calc__sizes-image .calc__map-item__pos-m29, .calc__map .calc__colitem-image .calc__map-item__pos-d29, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d29, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d29, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d29, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d29, .calc__map .calc__sizes-image .calc__map-item__pos-d29, .calc__map .calc__colitem-image .calc__map-item__pos-m30, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m30, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m30, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m30, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m30, .calc__map .calc__sizes-image .calc__map-item__pos-m30, .calc__map .calc__colitem-image .calc__map-item__pos-d30, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d30, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d30, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d30, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d30, .calc__map .calc__sizes-image .calc__map-item__pos-d30, .calc__map .calc__colitem-image .calc__map-item__pos-m31, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m31, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m31, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m31, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m31, .calc__map .calc__sizes-image .calc__map-item__pos-m31, .calc__map .calc__colitem-image .calc__map-item__pos-d31, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d31, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d31, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d31, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d31, .calc__map .calc__sizes-image .calc__map-item__pos-d31, .calc__map .calc__colitem-image .calc__map-item__pos-m32, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m32, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m32, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m32, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m32, .calc__map .calc__sizes-image .calc__map-item__pos-m32, .calc__map .calc__colitem-image .calc__map-item__pos-d32, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d32, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d32, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d32, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d32, .calc__map .calc__sizes-image .calc__map-item__pos-d32, .calc__map .calc__colitem-image .calc__map-item__pos-m33, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m33, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m33, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m33, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m33, .calc__map .calc__sizes-image .calc__map-item__pos-m33, .calc__map .calc__colitem-image .calc__map-item__pos-d33, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d33, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d33, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d33, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d33, .calc__map .calc__sizes-image .calc__map-item__pos-d33, .calc__map .calc__colitem-image .calc__map-item__pos-m34, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m34, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m34, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m34, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m34, .calc__map .calc__sizes-image .calc__map-item__pos-m34, .calc__map .calc__colitem-image .calc__map-item__pos-d34, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d34, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d34, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d34, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d34, .calc__map .calc__sizes-image .calc__map-item__pos-d34, .calc__map .calc__colitem-image .calc__map-item__pos-m35, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m35, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m35, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m35, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m35, .calc__map .calc__sizes-image .calc__map-item__pos-m35, .calc__map .calc__colitem-image .calc__map-item__pos-d35, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d35, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d35, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d35, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d35, .calc__map .calc__sizes-image .calc__map-item__pos-d35, .calc__map .calc__colitem-image .calc__map-item__pos-m36, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m36, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m36, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m36, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m36, .calc__map .calc__sizes-image .calc__map-item__pos-m36, .calc__map .calc__colitem-image .calc__map-item__pos-d36, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d36, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d36, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d36, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d36, .calc__map .calc__sizes-image .calc__map-item__pos-d36, .calc__map .calc__colitem-image .calc__map-item__pos-m37, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m37, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m37, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m37, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m37, .calc__map .calc__sizes-image .calc__map-item__pos-m37, .calc__map .calc__colitem-image .calc__map-item__pos-d37, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d37, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d37, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d37, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d37, .calc__map .calc__sizes-image .calc__map-item__pos-d37, .calc__map .calc__colitem-image .calc__map-item__pos-m38, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m38, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m38, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m38, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m38, .calc__map .calc__sizes-image .calc__map-item__pos-m38, .calc__map .calc__colitem-image .calc__map-item__pos-d38, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d38, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d38, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d38, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d38, .calc__map .calc__sizes-image .calc__map-item__pos-d38, .calc__map .calc__colitem-image .calc__map-item__pos-m39, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m39, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m39, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m39, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m39, .calc__map .calc__sizes-image .calc__map-item__pos-m39, .calc__map .calc__colitem-image .calc__map-item__pos-d39, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d39, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d39, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d39, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d39, .calc__map .calc__sizes-image .calc__map-item__pos-d39, .calc__map .calc__colitem-image .calc__map-item__pos-m40, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m40, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m40, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m40, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m40, .calc__map .calc__sizes-image .calc__map-item__pos-m40, .calc__map .calc__colitem-image .calc__map-item__pos-d40, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d40, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d40, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d40, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d40, .calc__map .calc__sizes-image .calc__map-item__pos-d40, .calc__map .calc__colitem-image .calc__map-item__pos-m41, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m41, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m41, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m41, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m41, .calc__map .calc__sizes-image .calc__map-item__pos-m41, .calc__map .calc__colitem-image .calc__map-item__pos-d41, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d41, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d41, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d41, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d41, .calc__map .calc__sizes-image .calc__map-item__pos-d41, .calc__map .calc__colitem-image .calc__map-item__pos-m42, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m42, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m42, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m42, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m42, .calc__map .calc__sizes-image .calc__map-item__pos-m42, .calc__map .calc__colitem-image .calc__map-item__pos-d42, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d42, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d42, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d42, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d42, .calc__map .calc__sizes-image .calc__map-item__pos-d42, .calc__map .calc__colitem-image .calc__map-item__pos-m43, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m43, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m43, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m43, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m43, .calc__map .calc__sizes-image .calc__map-item__pos-m43, .calc__map .calc__colitem-image .calc__map-item__pos-d43, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d43, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d43, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d43, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d43, .calc__map .calc__sizes-image .calc__map-item__pos-d43, .calc__map .calc__colitem-image .calc__map-item__pos-m44, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m44, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m44, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m44, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m44, .calc__map .calc__sizes-image .calc__map-item__pos-m44, .calc__map .calc__colitem-image .calc__map-item__pos-d44, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d44, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d44, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d44, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d44, .calc__map .calc__sizes-image .calc__map-item__pos-d44, .calc__map .calc__colitem-image .calc__map-item__pos-m45, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m45, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m45, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m45, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m45, .calc__map .calc__sizes-image .calc__map-item__pos-m45, .calc__map .calc__colitem-image .calc__map-item__pos-d45, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d45, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d45, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d45, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d45, .calc__map .calc__sizes-image .calc__map-item__pos-d45, .calc__map .calc__colitem-image .calc__map-item__pos-m46, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m46, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m46, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m46, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m46, .calc__map .calc__sizes-image .calc__map-item__pos-m46, .calc__map .calc__colitem-image .calc__map-item__pos-d46, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d46, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d46, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d46, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d46, .calc__map .calc__sizes-image .calc__map-item__pos-d46, .calc__map .calc__colitem-image .calc__map-item__pos-m47, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m47, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m47, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m47, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m47, .calc__map .calc__sizes-image .calc__map-item__pos-m47, .calc__map .calc__colitem-image .calc__map-item__pos-d47, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d47, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d47, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d47, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d47, .calc__map .calc__sizes-image .calc__map-item__pos-d47, .calc__map .calc__colitem-image .calc__map-item__pos-m48, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m48, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m48, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m48, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m48, .calc__map .calc__sizes-image .calc__map-item__pos-m48, .calc__map .calc__colitem-image .calc__map-item__pos-d48, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d48, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d48, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d48, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d48, .calc__map .calc__sizes-image .calc__map-item__pos-d48, .calc__map .calc__colitem-image .calc__map-item__pos-m49, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m49, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m49, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-m49, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-m49, .calc__map .calc__sizes-image .calc__map-item__pos-m49, .calc__map .calc__colitem-image .calc__map-item__pos-d49, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d49, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d49, .calc__map .calc__colitem-image .calc__sizes-image .calc__map-item__pos-d49, .calc__map .calc__sizes-image .calc__colitem-image .calc__map-item__pos-d49, .calc__map .calc__sizes-image .calc__map-item__pos-d49 {
+    width: 46px;
+    height: 46px;
+  }
+}
+
 .calc__map .calc__colitem-image .calc__map-item__pos-m11, .calc__map .calc__sizes-image .calc__map-item__pos-m11, .calc__map .calc__colitem-image .calc__map-item__pos-d11, .calc__map .calc__sizes-image .calc__map-item__pos-d11 {
-  left: 68px;
   top: 2px;
+  left: 68px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m11, .calc__map .calc__sizes-image .calc__map-item__pos-m11, .calc__map .calc__colitem-image .calc__map-item__pos-d11, .calc__map .calc__sizes-image .calc__map-item__pos-d11 {
+    top: 1px;
+    left: 37px;
+  }
 }
 
 .calc__map .calc__colitem-image .calc__map-item__pos-m12, .calc__map .calc__sizes-image .calc__map-item__pos-m12, .calc__map .calc__colitem-image .calc__map-item__pos-d12, .calc__map .calc__sizes-image .calc__map-item__pos-d12 {
-  left: 153px;
   top: 2px;
+  left: 153px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m12, .calc__map .calc__sizes-image .calc__map-item__pos-m12, .calc__map .calc__colitem-image .calc__map-item__pos-d12, .calc__map .calc__sizes-image .calc__map-item__pos-d12 {
+    top: 1px;
+    left: 83px;
+  }
 }
 
 .calc__map .calc__colitem-image .calc__map-item__pos-m13, .calc__map .calc__sizes-image .calc__map-item__pos-m13, .calc__map .calc__colitem-image .calc__map-item__pos-d13, .calc__map .calc__sizes-image .calc__map-item__pos-d13 {
-  left: 238px;
   top: 2px;
+  left: 238px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m13, .calc__map .calc__sizes-image .calc__map-item__pos-m13, .calc__map .calc__colitem-image .calc__map-item__pos-d13, .calc__map .calc__sizes-image .calc__map-item__pos-d13 {
+    top: 1px;
+    left: 129px;
+  }
 }
 
 .calc__map .calc__colitem-image .calc__map-item__pos-m14, .calc__map .calc__sizes-image .calc__map-item__pos-m14, .calc__map .calc__colitem-image .calc__map-item__pos-d14, .calc__map .calc__sizes-image .calc__map-item__pos-d14 {
-  left: 323px;
   top: 2px;
+  left: 323px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m14, .calc__map .calc__sizes-image .calc__map-item__pos-m14, .calc__map .calc__colitem-image .calc__map-item__pos-d14, .calc__map .calc__sizes-image .calc__map-item__pos-d14 {
+    top: 1px;
+    left: 175px;
+  }
 }
 
 .calc__map .calc__colitem-image .calc__map-item__pos-m21, .calc__map .calc__sizes-image .calc__map-item__pos-m21 {
@@ -544,9 +598,23 @@ body {
   top: 142px;
 }
 
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m21, .calc__map .calc__sizes-image .calc__map-item__pos-m21 {
+    left: 0px;
+    top: 77px;
+  }
+}
+
 .calc__map .calc__colitem-image .calc__map-item__pos-m22, .calc__map .calc__sizes-image .calc__map-item__pos-m22 {
   left: 2px;
   top: 57px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m22, .calc__map .calc__sizes-image .calc__map-item__pos-m22 {
+    left: 0px;
+    top: 31px;
+  }
 }
 
 .calc__map .calc__colitem-image .calc__map-item__pos-m23, .calc__map .calc__sizes-image .calc__map-item__pos-m23 {
@@ -554,9 +622,23 @@ body {
   top: 2px;
 }
 
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m23, .calc__map .calc__sizes-image .calc__map-item__pos-m23 {
+    left: 33px;
+    top: 0px;
+  }
+}
+
 .calc__map .calc__colitem-image .calc__map-item__pos-m24, .calc__map .calc__sizes-image .calc__map-item__pos-m24 {
   left: 150px;
   top: 2px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m24, .calc__map .calc__sizes-image .calc__map-item__pos-m24 {
+    left: 82px;
+    top: 0px;
+  }
 }
 
 .calc__map .calc__colitem-image .calc__map-item__pos-m25, .calc__map .calc__sizes-image .calc__map-item__pos-m25 {
@@ -564,9 +646,23 @@ body {
   top: 2px;
 }
 
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m25, .calc__map .calc__sizes-image .calc__map-item__pos-m25 {
+    left: 131px;
+    top: 0px;
+  }
+}
+
 .calc__map .calc__colitem-image .calc__map-item__pos-m26, .calc__map .calc__sizes-image .calc__map-item__pos-m26 {
   left: 330px;
   top: 2px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m26, .calc__map .calc__sizes-image .calc__map-item__pos-m26 {
+    left: 180px;
+    top: 0px;
+  }
 }
 
 .calc__map .calc__colitem-image .calc__map-item__pos-m27, .calc__map .calc__sizes-image .calc__map-item__pos-m27 {
@@ -574,9 +670,23 @@ body {
   top: 57px;
 }
 
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m27, .calc__map .calc__sizes-image .calc__map-item__pos-m27 {
+    right: 0px;
+    top: 31px;
+  }
+}
+
 .calc__map .calc__colitem-image .calc__map-item__pos-m28, .calc__map .calc__sizes-image .calc__map-item__pos-m28 {
   right: 2px;
   top: 142px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m28, .calc__map .calc__sizes-image .calc__map-item__pos-m28 {
+    right: 0px;
+    top: 77px;
+  }
 }
 
 .calc__map .calc__colitem-image .calc__map-item__pos-d21, .calc__map .calc__sizes-image .calc__map-item__pos-d21 {
@@ -584,9 +694,23 @@ body {
   top: 125px;
 }
 
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-d21, .calc__map .calc__sizes-image .calc__map-item__pos-d21 {
+    left: 1px;
+    top: 68px;
+  }
+}
+
 .calc__map .calc__colitem-image .calc__map-item__pos-d22, .calc__map .calc__sizes-image .calc__map-item__pos-d22 {
   left: 195px;
   top: 2px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-d22, .calc__map .calc__sizes-image .calc__map-item__pos-d22 {
+    top: 1px;
+    left: 106px;
+  }
 }
 
 .calc__map .calc__colitem-image .calc__map-item__pos-d23, .calc__map .calc__sizes-image .calc__map-item__pos-d23 {
@@ -594,9 +718,23 @@ body {
   top: 125px;
 }
 
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-d23, .calc__map .calc__sizes-image .calc__map-item__pos-d23 {
+    right: 1px;
+    top: 68px;
+  }
+}
+
 .calc__map .calc__colitem-image .calc__map-item__pos-m31, .calc__map .calc__sizes-image .calc__map-item__pos-m31 {
   left: 2px;
   top: 164px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m31, .calc__map .calc__sizes-image .calc__map-item__pos-m31 {
+    left: 1px;
+    top: 91px;
+  }
 }
 
 .calc__map .calc__colitem-image .calc__map-item__pos-m32, .calc__map .calc__sizes-image .calc__map-item__pos-m32 {
@@ -604,9 +742,23 @@ body {
   top: 57px;
 }
 
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m32, .calc__map .calc__sizes-image .calc__map-item__pos-m32 {
+    left: 1px;
+    top: 31px;
+  }
+}
+
 .calc__map .calc__colitem-image .calc__map-item__pos-m33, .calc__map .calc__sizes-image .calc__map-item__pos-m33 {
   left: 60px;
   top: 2px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m33, .calc__map .calc__sizes-image .calc__map-item__pos-m33 {
+    left: 33px;
+    top: 1px;
+  }
 }
 
 .calc__map .calc__colitem-image .calc__map-item__pos-m34, .calc__map .calc__sizes-image .calc__map-item__pos-m34 {
@@ -614,9 +766,23 @@ body {
   top: 2px;
 }
 
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m34, .calc__map .calc__sizes-image .calc__map-item__pos-m34 {
+    left: 91px;
+    top: 1px;
+  }
+}
+
 .calc__map .calc__colitem-image .calc__map-item__pos-m35, .calc__map .calc__sizes-image .calc__map-item__pos-m35 {
   left: 274px;
   top: 2px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m35, .calc__map .calc__sizes-image .calc__map-item__pos-m35 {
+    left: 149px;
+    top: 1px;
+  }
 }
 
 .calc__map .calc__colitem-image .calc__map-item__pos-d31, .calc__map .calc__sizes-image .calc__map-item__pos-d31 {
@@ -624,9 +790,23 @@ body {
   top: 125px;
 }
 
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-d31, .calc__map .calc__sizes-image .calc__map-item__pos-d31 {
+    left: 1px;
+    top: 68px;
+  }
+}
+
 .calc__map .calc__colitem-image .calc__map-item__pos-d32, .calc__map .calc__sizes-image .calc__map-item__pos-d32 {
   left: 126px;
   top: 2px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-d32, .calc__map .calc__sizes-image .calc__map-item__pos-d32 {
+    left: 68px;
+    top: 1px;
+  }
 }
 
 .calc__map .calc__colitem-image .calc__map-item__pos-d33, .calc__map .calc__sizes-image .calc__map-item__pos-d33 {
@@ -634,9 +814,23 @@ body {
   top: 2px;
 }
 
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-d33, .calc__map .calc__sizes-image .calc__map-item__pos-d33 {
+    left: 144px;
+    top: 1px;
+  }
+}
+
 .calc__map .calc__colitem-image .calc__map-item__pos-m41, .calc__map .calc__sizes-image .calc__map-item__pos-m41 {
   left: 118px;
   top: 2px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m41, .calc__map .calc__sizes-image .calc__map-item__pos-m41 {
+    left: 64px;
+    top: 1px;
+  }
 }
 
 .calc__map .calc__colitem-image .calc__map-item__pos-m42, .calc__map .calc__sizes-image .calc__map-item__pos-m42 {
@@ -644,9 +838,23 @@ body {
   top: 2px;
 }
 
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m42, .calc__map .calc__sizes-image .calc__map-item__pos-m42 {
+    left: 122px;
+    top: 1px;
+  }
+}
+
 .calc__map .calc__colitem-image .calc__map-item__pos-m43, .calc__map .calc__sizes-image .calc__map-item__pos-m43 {
   left: 332px;
   top: 2px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m43, .calc__map .calc__sizes-image .calc__map-item__pos-m43 {
+    left: 180px;
+    top: 1px;
+  }
 }
 
 .calc__map .calc__colitem-image .calc__map-item__pos-m44, .calc__map .calc__sizes-image .calc__map-item__pos-m44 {
@@ -654,9 +862,23 @@ body {
   top: 57px;
 }
 
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m44, .calc__map .calc__sizes-image .calc__map-item__pos-m44 {
+    right: 1px;
+    top: 33px;
+  }
+}
+
 .calc__map .calc__colitem-image .calc__map-item__pos-m45, .calc__map .calc__sizes-image .calc__map-item__pos-m45 {
   right: 2px;
   top: 164px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-m45, .calc__map .calc__sizes-image .calc__map-item__pos-m45 {
+    right: 1px;
+    top: 91px;
+  }
 }
 
 .calc__map .calc__colitem-image .calc__map-item__pos-d41, .calc__map .calc__sizes-image .calc__map-item__pos-d41 {
@@ -664,14 +886,35 @@ body {
   top: 2px;
 }
 
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-d41, .calc__map .calc__sizes-image .calc__map-item__pos-d41 {
+    left: 69px;
+    top: 1px;
+  }
+}
+
 .calc__map .calc__colitem-image .calc__map-item__pos-d42, .calc__map .calc__sizes-image .calc__map-item__pos-d42 {
   left: 262px;
   top: 2px;
 }
 
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-d42, .calc__map .calc__sizes-image .calc__map-item__pos-d42 {
+    left: 144px;
+    top: 1px;
+  }
+}
+
 .calc__map .calc__colitem-image .calc__map-item__pos-d43, .calc__map .calc__sizes-image .calc__map-item__pos-d43 {
   right: 2px;
   top: 125px;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__map .calc__colitem-image .calc__map-item__pos-d43, .calc__map .calc__sizes-image .calc__map-item__pos-d43 {
+    right: 1px;
+    top: 69px;
+  }
 }
 
 .calc__sizes .calc__row, .calc__sizes .calc__row_center, .calc__sizes .calc__technic-row {
@@ -711,6 +954,15 @@ body {
   z-index: 100;
 }
 
+@media screen and (max-width: 767px) {
+  .calc__sizes-size__input, .calc__sizes input, .calc__sizes input[type=number], .calc__sizes input[type=text] {
+    width: 50px;
+    height: 40px;
+    margin: 10px;
+    font-size: 16px;
+  }
+}
+
 .calc__sizes-size__input::-webkit-inner-spin-button, .calc__sizes input::-webkit-inner-spin-button, .calc__sizes input[type=number]::-webkit-inner-spin-button, .calc__sizes input[type=text]::-webkit-inner-spin-button, .calc__sizes-size__input::-webkit-outer-spin-button, .calc__sizes input::-webkit-outer-spin-button, .calc__sizes input[type=number]::-webkit-outer-spin-button, .calc__sizes input[type=text]::-webkit-outer-spin-button {
   display: none;
 }
@@ -748,8 +1000,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-preferred-size: calc(33% - 5px);
-      flex-basis: calc(33% - 5px);
+}
+
+@media screen and (max-width: 767px) {
+  .calc__table-item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 .calc__table-item span.size {
@@ -767,6 +1024,13 @@ body {
       flex-basis: calc(33% - 5px);
 }
 
+@media screen and (max-width: 767px) {
+  .calc__date-item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
 .calc__technic-row {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -775,6 +1039,13 @@ body {
 .calc__technic-checkbox {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .calc__technic-checkbox {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 .calc__order-row {
@@ -1006,5 +1277,36 @@ body {
   margin-right: 5px;
   -webkit-box-shadow: 0 0 8px rgba(175, 175, 175, 0.5);
           box-shadow: 0 0 8px rgba(175, 175, 175, 0.5);
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    background: -webkit-gradient(linear, left top, left bottom, from(#c9bbd6), to(#4f80a8));
+    background: linear-gradient(to bottom, #c9bbd6, #4f80a8);
+    padding: 0;
+    height: auto;
+  }
+  .logo {
+    float: none;
+    height: auto;
+  }
+  .logo a img {
+    margin: 0 !important;
+  }
+}
+
+.footer {
+  height: auto;
+}
+
+.footer-container {
+  padding: 0;
+}
+
+.footer-copyright {
+  max-width: calc(100% - 30px);
+  text-align: center;
+  font-size: 0.7em;
+  padding: 5px 15px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,15 +2,15 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru-ru" lang="ru-ru" dir="ltr" >
 <head>
-    <base href="http://kuhni.mebel-prestig.ru/">
+    <base href="http://kuhni.mebel-prestig.loc/">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Кухни мебельная фабрика Престиж Киров" />
 	<meta name="description" content="Кухни в Кирове" />
 	<title>Кухни на заказ</title>
 	<link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-    <meta name="viewport" content="width=1280">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/template.css" type="text/css" />
-    <link rel="stylesheet" href="/css/style.min.css" media="screen"/>
+    <link rel="stylesheet" href="/css/style.css" media="screen"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="/js/owl.carousel.min.js"></script>
     <script src="/js/calc.js"></script>
@@ -386,7 +386,7 @@
     </div>
     <div class="footer-container">
         <div class="footer-counters"></div>
-        <div style="text-align: center; font-size: 75%; padding: 5px 0; width:95%">Отправляя любую форму на сайте, вы
+        <div class="footer-copyright">Отправляя любую форму на сайте, вы
             соглашаетесь с <a href="/confidentiality">политикой конфиденциальности</a> данного сайта</div>
     </div>
 </div>
